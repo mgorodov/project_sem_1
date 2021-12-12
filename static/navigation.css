@@ -1,0 +1,21 @@
+.menu {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.menu a {
+    padding: 15px;
+    font-size: 36px;
+    display: block;
+    color: #edf0f1;
+    text-decoration: none;
+}
+
+.menu a:hover, .menu a:focus {
+    color: #0088a9;
+    text-decoration: none;
+}

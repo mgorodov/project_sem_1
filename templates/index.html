@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}?5242334">
+    <title>Melbourne Housing Market</title>
+</head>
+<body>
+    <nav class="menu">
+        {% for text, link in links %}
+            <a href="{{ link }}">{{ text }}</a>
+        {% endfor %}
+    </nav>
+    <div class="main">
+        {% if cur_filter != None %}
+            <form class="filter_form" action="" method="post">
+                <label for="filters">Filter</label>
+                <input type="text" name="filters" autocomplete="off" value="{{ cur_filter }}">
+                <input type="submit">
+            </form>
+        {% endif %}
+        {% if errors != None %}
+            <div class="errors">
+                {% for error in errors %}
+                    {{ error | safe }}
+                {% endfor %}
+            </div>
+        {% endif %}
+        {% if html_string != None %}
+            {{ html_string | safe }}
+        {% endif %}
+        {% if additional_info != None %}
+            <div class="additional">
+                {{ additional_info | safe }}
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>

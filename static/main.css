@@ -1,0 +1,21 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.errors{
+    padding: 0 20px 20px 20px;
+    font-size: 24px;
+    color: #f44336;
+    text-decoration: none;
+}
+
+.additional{
+    font-size: 20px;
+}
+
+.filter_form{
+    padding: 20px;
+}
